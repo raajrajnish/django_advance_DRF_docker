@@ -1,0 +1,23 @@
+# Step 1. Define version
+version: '3.3'
+# Step 2. define all services which includes
+#  1. name of the service - here name of the service is 'app',
+#  2. build -
+#  3. context -
+#  4. ports - maps local port with docker port
+#  5. volume - helps in getting all the latest changes from local directory to docker directory in realtime.
+#  6. command - type the command that will be used by docker container to run that service
+#   > = run command in next line
+#   sh -c = run shell command
+#   0.0.0.0 = means run django development server on all IP address inside docker
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c 'python manage.py runserver 0.0.0.0:8000'
+
