@@ -26,3 +26,12 @@ using django with drf and using docker
 #### 3. newgrp docker
 #### 4. docker run hello-world
 #### https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+
+
+#### vim editor commands
+#### https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
+#### when doing git commit -a (inside editor use vim commands) also use ctrl + commands
+
+#### CI/CD using travis CI
+#### create file in root .travis.yml
+#### 
