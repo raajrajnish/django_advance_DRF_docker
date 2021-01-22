@@ -34,4 +34,34 @@ using django with drf and using docker
 
 #### CI/CD using travis CI
 #### create file in root .travis.yml
-#### 
+
+
+#### writing django unit tests
+#### make sure file name and function name must start with test as 
+#### django looks for these files only to run unit tests
+
+#### on change in files say requirements.txt run
+#### docker-compose build
+
+#### how to create app in project
+#### sudo docker-compose run app sh -c 'djnago-admin.py startapp core'
+
+#### remove right proctected folder - sudo rm -r foldername
+#### remove right proctected file - sudo rm -f app/core/tests.py (filename)
+
+#### please try docker compose to delete folder and file, i think it will work
+#### because docker compose will use same user with rights to do this thing
+
+#### create a folder docker-compose run app sh -c "mkdir /app/core/tests"
+#### create a file docker-compose run app sh -c "touch /app/core/tests/__init__.py"
+
+#### how to change readonly status of a folder sudo chown -R $(whoami) app/core/tests
+
+#### run unit test - docker-compose run app sh -c "python manage.py test"
+#### run migrations docker-compose run app sh -c "python manage.py makemigrations core"
+#### run flake8 -  docker-compose run app sh -c "python manage.py test && flake8"
+
+
+
+#### deployment
+#### https://www.youtube.com/watch?v=ZpR1W-NWnp4
