@@ -60,8 +60,7 @@ using django with drf and using docker
 #### run unit test - docker-compose run app sh -c "python manage.py test"
 #### run migrations docker-compose run app sh -c "python manage.py makemigrations core"
 #### run flake8 -  docker-compose run app sh -c "python manage.py test && flake8"
-
-
+#### git push  git push -u https://github.com/raajrajnish/django_advance_DRF_docker.git
 
 #### deployment
 #### https://www.youtube.com/watch?v=ZpR1W-NWnp4
