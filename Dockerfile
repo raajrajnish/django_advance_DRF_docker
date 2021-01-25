@@ -1,6 +1,6 @@
 # STEP 1. Define Docker Image to work with (mandatory)
 # python:latest - we will pick latest tag image from dockerhub
-FROM python:latest
+FROM python:3.7-alpine
 # optional step
 MAINTAINER raajrajnish
 
@@ -10,7 +10,12 @@ ENV PYTHONUNBUFFERED 1
 
 # Step 3. Install dependencies, first copy then install
 COPY ./requirements.txt /requirements.txt
+RUN pip install --upgrade pip
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+      gcc libc-dev linux-headers postgresql-dev
 RUN pip install -r /requirements.txt
+RUN apk del .tmp-build-deps
 
 # Step 4. Create directory to keep our application source code in docker
 RUN mkdir /app

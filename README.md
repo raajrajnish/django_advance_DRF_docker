@@ -1,6 +1,7 @@
 # django_advanced_DRF_docker
 using django with drf and using docker
 
+#### use alpine version if you want to run apk command
 #### Docker Commands
 0. Build Dockerfile (with no extension) then run below commands
 1. After creating Dockerfile
@@ -16,25 +17,22 @@ using django with drf and using docker
 #### Create Django Project
 1. from root -> sudo docker-compose run app (service name) sh -c "django-admin.py startproject app ." (command)
 
-
 #### Essentials Docker Commands
-#### https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+1. https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
 #### Run docker without sudo
-#### 1.  sudo groupadd docker
-#### 1.  sudo gpasswd -a $USER docker # whoami will print current user
-#### 3. newgrp docker
-#### 4. docker run hello-world
+1. sudo groupadd docker
+2. sudo gpasswd -a $USER docker # whoami will print current user
+3. newgrp docker
+4. docker run hello-world
 #### https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
 
-
 #### vim editor commands
-#### https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
-#### when doing git commit -a (inside editor use vim commands) also use ctrl + commands
+1. https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
+2. when doing git commit -a (inside editor use vim commands) also use ctrl + commands
 
 #### CI/CD using travis CI
 #### create file in root .travis.yml
-
 
 #### writing django unit tests
 #### make sure file name and function name must start with test as 
